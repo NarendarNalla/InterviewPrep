@@ -1,0 +1,160 @@
+Level 1 — Fundamentals and Thread Creation
+Priority: Must Know
+- Process vs. thread
+- What is multithreading?
+- Concurrency vs. parallelism
+- Creating threads using Thread and Runnable
+- Thread vs. Runnable
+- Runnable vs. Callable
+- start() vs. run()
+- What happens when you call start() twice?
+- Thread.sleep() vs. Thread.join()
+- Thread.currentThread()
+- Thread life cycle and all six thread states
+- Daemon vs. user threads
+- interrupt() and InterruptedException
+
+
+Level 2 — Synchronization and Thread Safety
+Priority: Must Know — Highest
+- Race conditions
+- Shared mutable state
+- Why synchronization is required
+- synchronized methods and blocks
+- Static synchronization
+- Object-level lock vs. class-level lock
+- Intrinsic locks / monitors
+- Thread safety
+- Critical sections and mutual exclusion
+- Atomicity vs. visibility
+- Deadlock, livelock and starvation
+- Immutable objects and thread safety
+- Thread-safe vs. non-thread-safe classes
+Practice programs:
+1. Increment a shared counter using two threads.
+2. Implement a thread-safe bank account.
+3. Demonstrate and prevent deadlock.
+4. Implement a ticket-booking system.
+
+
+Level 3 — volatile and Java Memory Model
+Priority: Must Know
+- What is the Java Memory Model (JMM)?
+- Heap memory vs. thread stacks
+- Visibility problems and stale reads
+- volatile keyword
+- volatile vs. synchronized
+- Why volatile does not make count++ atomic
+- Happens-before relationship
+- Instruction reordering
+- Thread start() and join() visibility guarantees
+- Double-checked locking
+- Thread-safe Singleton implementation
+
+
+Level 4 — Inter-Thread Communication
+Priority: Must Know
+- wait(), notify() and notifyAll()
+- Why these methods belong to Object
+- Why they must be called while holding the object's monitor
+- wait() vs. sleep()
+- notify() vs. notifyAll()
+- Why wait() should generally be inside a while loop
+- Producer-consumer problem
+- BlockingQueue as an alternative to manual coordination
+Practice: Implement producer-consumer using both wait()/notifyAll() and BlockingQueue.
+
+
+Level 5 — Locks and Synchronization Utilities
+Priority: Must Know — Focus on common APIs
+- Lock interface
+- ReentrantLock vs. synchronized
+- lock(), unlock() and tryLock()
+- Why unlock() should be used inside a finally block
+- Condition: await(), signal() and signalAll()
+- CountDownLatch — wait for tasks to complete
+- Semaphore — limit concurrent access
+- CyclicBarrier — wait for threads to reach a common point
+Know the basic purpose and use case of each utility.
+
+
+Level 6 — Atomic Classes
+Priority: Must Know
+- AtomicInteger and AtomicLong
+- Compare-and-set (CAS)
+- incrementAndGet() vs. getAndIncrement()
+- Atomic classes vs. synchronized
+- LongAdder vs. AtomicLong — basic differences
+
+
+Level 7 — Executor Framework and Thread Pools
+Priority: Must Know — Very Important for backend roles
+- Why thread pools are needed
+- Executor vs. ExecutorService
+- execute() vs. submit()
+- shutdown() vs. shutdownNow()
+- awaitTermination()
+- Fixed, cached and single-thread executors
+- ScheduledExecutorService
+- ThreadPoolExecutor
+- Core pool size vs. maximum pool size
+- Work queue and keep-alive time
+- Bounded vs. unbounded queues
+- Rejected execution policies — basic understanding
+- Graceful shutdown
+Practice: Execute multiple tasks using ExecutorService, collect their results, and shut down the executor properly.
+
+
+Level 8 — Callable, Future and CompletableFuture
+Priority: Must Know for modern Java backend interviews
+- Runnable vs. Callable
+- Future and its get(), isDone() and cancel() methods
+- Synchronous vs. asynchronous execution
+- CompletableFuture
+- runAsync() vs. supplyAsync()
+- thenApply() vs. thenCompose() vs. thenCombine()
+- allOf() vs. anyOf()
+- Exception handling with exceptionally(), handle() and whenComplete()
+- Timeouts using orTimeout()
+- Combining multiple independent API calls
+- Future vs. CompletableFuture
+
+
+Level 9 — Concurrent Collections
+Priority: Must Know
+- Why ArrayList, HashMap and HashSet are not inherently thread-safe
+- Collections.synchronizedList() and synchronizedMap()
+- ConcurrentHashMap
+- ConcurrentHashMap vs. HashMap
+- ConcurrentHashMap vs. synchronized map
+- BlockingQueue
+- ArrayBlockingQueue vs. LinkedBlockingQueue — basic differences
+- CopyOnWriteArrayList — when to use it
+- Fail-fast vs. weakly consistent iterators
+
+
+Level 10 — Modern Java Concurrency
+Priority: Important
+- Platform threads vs. virtual threads
+- Virtual threads introduced in Java 21
+- Thread.startVirtualThread()
+- Executors.newVirtualThreadPerTaskExecutor()
+- Virtual threads vs. traditional thread pools
+- When virtual threads help and when they don't
+- Why virtual threads do not automatically speed up CPU-bound tasks
+- ThreadLocal — purpose and basic use cases
+
+
+Optional / Advanced Topics
+Study these after completing the must-know levels.
+- ForkJoinPool and work-stealing
+- Parallel streams and their pitfalls
+- StampedLock and optimistic reads
+- Phaser and Exchanger
+- ABA problem and false sharing
+- Advanced ThreadPoolExecutor tuning
+- ThreadMXBean, thread dumps, JFR and JMC
+- ScopedValue and advanced context propagation
+- Thread pinning and version-specific virtual-thread behavior
+- Advanced JVM topics: safepoints, stop-the-world pauses and GC interaction with threads
+- Production-level backpressure, rate limiting and concurrency monitoring

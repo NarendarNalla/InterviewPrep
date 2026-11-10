@@ -1,0 +1,30 @@
+| Problem              | Heap                  |
+| -------------------- | --------------------- |
+| Kth Largest          | Min Heap, size K      |
+| Kth Smallest         | Max Heap, size K      |
+| K Largest Elements   | Min Heap, size K      |
+| K Smallest Elements  | Max Heap, size K      |
+| Top K Frequent       | Min Heap, size K      |
+| K Closest Points     | Max Heap, size K      |
+| Merge K Sorted Lists | Min Heap              |
+| Meeting Rooms        | Min Heap of end times |
+| Median from Stream   | Two Heaps             |
+
+
+Phase 1 — Easy
+Kth Largest Element in an Array
+Kth Smallest Element
+Last Stone Weight
+K Closest Points to Origin
+
+Phase 2 — Medium
+Top K Frequent Elements
+Kth Largest Element in a Stream
+Sort Characters By Frequency
+Task Scheduler
+
+Phase 3 — Important Interview Problems 🔥
+Merge K Sorted Lists
+Find Median from Data Stream
+Meeting Rooms II
+Smallest Range Covering Elements from K Lists

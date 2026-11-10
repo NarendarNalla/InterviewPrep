@@ -1,0 +1,37 @@
+JAVA
+================================================================
+String.format()
+System.out.printf()
+Custom Exceptions
+hashCode
+String literal vs String New Keyword ( String Immutable )
+== & equals 
+overriding & overloading ( Method , Constructor )
+method overriding -  runtime polymorphism
+why java dont support multiple inheritance..>
+use of @override annotaations ..? is it mandatory ..? if not then why ..?
+Access Specifiers in Method Overriding rules ..?
+is-a & has-a relationship
+why abstract class, why interfaces, why inheirtance, when to use and not to use..?;  examples ..?
+check what we can have in abstract clases and interfaces ..? In latest update of JDK
+Note: All the methods inside an interface are implicitly public and all fields are implicitly public static final. For example,
+Why default methods? in interfaces..? private and static Methods in Interface ..?
+We can achieve polymorphism in Java using the following ways: Method Overriding, Method Overloading, Operator Overloading ( Compile and run time polymorphism )
+Nested & Inner Classes, Nested Static Classes, Anonymous class, Sinlgeton class - Accessing static and non static classes
+Reflections of Java Classes, Delcared methods, fields, set , get , execute, invoke, class instance & create an object without using new keyword, Generics examples and usages
+Annotation Creation and Usage, @FunctionalInterface annotation usage, @SafeVarargs, @SupressedWarning - deprecated, unchecked - 2 categories, @Override, @Deprecated
+Assertions usages and examples
+Enum types & Usage
+Exceliption Handling Usecases, Interview Questions
+Runtime exp ( Unchecked exp), I/O exp ( checked exp )
+try, catch, finally , throw, throws related interview qstns 
+JVM, JDK, Platform Independent, Compiler, Interpeter, Execution Process, byte code, machine executable code
+All Java newwer version features
+CompletableFuture, lambda expression, volatile, atomic
+solid principles with strong examples
+git worktree
+Integer.comapre and Comparator.comparingInt - how to use and when to use ..?
+sort the hashmap with diff approaches based on keys and values
+optimistic and pessimistic locking ( Transactions ), Distributed Lock, Idempotency , which is Idempotency examples, ACID Properties
+what is auxilary space
+

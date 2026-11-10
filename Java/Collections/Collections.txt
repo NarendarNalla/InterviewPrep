@@ -1,0 +1,200 @@
+List Interface- https://www.programiz.com/java-programming/library/arraylist/sort    
+------------------------------------
+Java Collection Framework
+Java Collection Interface
+List, ArrayList, LinkedList, Vector, Stack ( difeernces, usage, internal implementation , usecases, and all metohds usage)
+Convert Arraylist to Array  & Array to ArrayList
+What is the difference between Java ArrayList and LinkedList?
+How to convert an ArrayList to Array?
+How to convert an array to ArrayList?
+How to create and initialize an ArrayList in a single line?
+How to convert an ArrayList to String?
+How to create an arraylist using the List interface?
+
+Vector - Syncronizes - ConcurrentModificationException - Less Efficient
+If Stack extends Vector the  stack is also synchronized..?
+Diff between removeAll and Clear methods
+Why use Deque over stack..?
+Who can use the clone method and Cloneable interfaace
+Shallow Copy and Deep Copy
+ArrayList list -> list.subList(start, end);
+ensureCapacity, removeAll, clear, clone, subList, retainAll, trimToSize advantage imp, 
+list.replaceAll( e -> e.toUpperCase()), list.removeIf(  e -> (e%2) == 0)
+numbers.forEach((e) -> {
+      e = e * 10;
+      System.out.print(e + " ");
+    });
+
+
+Queue Interface
+----------------------------------------------------
+ArrayDeque, LinkedList, PriorityQueue  -- impl Queue
+Deque, BlockingQueue, BlockingDeque sub interfaces - extends Queue
+Java Comparator, Comparable with PriorityQueue
+Deque - Double ended Queue
+**However, it is recommended to use Deque as a stack instead of the Stack class. It is because methods of Stack are synchronized.
+ArrayBlockingQueue & LinkedBlockingQueue - impl BlockingQueue
+Deque - LinkedList & ArrayDeque
+ArrayDeque Vs LinkedList with Deque
+ArrayDeque as Stack and Queue examples
+ LinkedList supports null elements, whereas ArrayDeque doesn't.
+ Each node in a linked list includes links to other nodes. That's why LinkedList requires more storage than ArrayDeque.
+ If you are implementing the queue or the deque data structure, an ArrayDeque is likely to faster than a LinkedList.
+
+Methods that blocks the operation
+The BlockingQueue also provides methods to block the operations and wait if the queue is full or empty.
+put() - Inserts an element to the blocking queue. If the queue is full, it will wait until the queue has space to insert an element.
+take() - Removes and returns an element from the blocking queue. If the queue is empty, it will wait until the queue has elements to be deleted.
+In Java, BlockingQueue is considered as the thread-safe collection. It is because it can be helpful in multi-threading operations.
+In multithreading processes, we can use put() and take() to block the operation of one thread to synchronize it with another thread.
+These methods will wait until they can be successfully executed.
+
+Map Interface
+------------------------------------------------------------------ 
+HashMap, LinkedHashMap, TreeMap, EnumMap, WeakHashMap classes implements -  Map Interface
+SortedMap, NavigableMap interfaces extends - Map Interface
+Internal implementation of hashmap ..? - Explain 
+HashMap Capacity & LoadFactor usage
+Streams usage of HashMap ( diff examples usage )
+
+Examples Usage:
+---------------------
+clear()	removes all mappings from the HashMap
+compute()	computes a new value for the specified key
+computeIfAbsent()	computes value if a mapping for the key is not present
+computeIfPresent()	computes a value for mapping if the key is present
+merge()	merges the specified mapping to the HashMap
+clone()	makes the copy of the HashMap
+
+WeakHashMap
+------------------
+As we can see, when the key two of a weak hashmap is set to null and perform garbage collection, the key is removed.
+
+It is because unlike hashmaps, keys of weak hashmaps are of weak reference type.
+This means the entry of a map are removed by the garbage collector if the key to that entry is no longer used. This is useful to save resources.
+
+Note: All functionalities of hashmaps and weak hashmaps are similar except keys of a weak hashmap are of weak reference,
+whereas keys of a hashmap are of strong reference.
+
+Cloneable & Serializable interfaces
+
+
+Methods of SortedMap - Examples Usage
+----------------------------------------
+The SortedMap interface includes all the methods of the Map interface. It is because Map is a super interface of SortedMap.
+
+Besides all those methods, here are the methods specific to the SortedMap interface.
+
+comparator() - returns a comparator that can be used to order keys in a map
+firstKey() - returns the first key of the sorted map
+lastKey() - returns the last key of the sorted map
+headMap(key) - returns all the entries of a map whose keys are less than the specified key
+tailMap(key) - returns all the entries of a map whose keys are greater than or equal to the specified key
+subMap(key1, key2) - returns all the entries of a map whose keys lies in between key1 and key2 including key1
+
+Methods of NavigableMap - Examples usage
+-------------------------------------------------
+The NavigableMap provides various methods that can be used to locate the entries of maps.
+
+descendingMap() - reverse the order of entries in a map
+descendingKeyMap() - reverses the order of keys in a map
+ceilingEntry() - returns an entry with the lowest key among all those entries whose keys are greater than or equal to the specified key
+ceilingKey() - returns the lowest key among those keys that are greater than or equal to the specified key
+floorEntry() - returns an entry with the highest key among all those entries whose keys are less than or equal to the specified key
+floorKey() - returns the highest key among those keys that are less than or equal to the specified key
+higherEntry() - returns an entry with the lowest key among all those entries whose keys are greater than the specified key
+higherKey() - returns the lowest key among those keys that are greater than the specified key
+lowerEntry() - returns an entry with the highest key among all those entries whose keys are less than the specified key
+lowerKey() - returns the highest key among those keys that are less than the specified key
+firstEntry() - returns the first entry (the entry with the lowest key) of the map
+lastEntry() - returns the last entry (the entry with the highest key) of the map
+pollFirstEntry() - returns and removes the first entry of the map
+pollLastEntry() - returns and removes the last entry of the map
+
+ConcurrentHashMap implements ConcurrentMap - synchronized Map - Thread safe
+   - search, forEach and reduce methods
+Why ConcurrentHashMap..?
+ The ConcurrentHashMap class allows multiple threads to access its entries concurrently.
+ By default, the concurrent hashmap is divided into 16 segments. This is the reason why 16 threads are allowed to concurrently 
+ modify the map at the same time. However, any number of threads can access the map at a time.
+
+
+
+Set Interface
+--------------------------------------------------------------------------
+HashSet, LinkedSet, EnumSet, TreeSet classes implements Set Interface
+SortedSet , NavigableSet interfaces extends Set Interface
+
+Union - to get the union of two sets x and y, we can use x.addAll(y)
+Intersection - to get the intersection of two sets x and y, we can use x.retainAll(y)
+Subset - to check if x is a subset of y, we can use y.containsAll(x)
+
+LinkedHashSet vs TreeSet
+LinkedHashSet vs HashSet
+
+Java Algorithms
+--------------------
+Collections.sort(), Collections.shuffle(), Collections.reverse(), Collections.swap(), Collections.addAll(), 
+Collections.fill(), Collections.copy(), Collections.binarySearch(), Collections.disJoint(), Collections.frequency()
+Collections.min(), Collections.max()
+
+reverse() - reverses the order of elements
+fill() - replace every element in a collection with the specified value
+copy() - creates a copy of elements from the specified source to destination
+swap() - swaps the position of two elements in a collection
+addAll() - adds all the elements of a collection to other collection
+frequency() - returns the count of the number of times an element is present in the collection
+disjoint() - checks whether two collections have no common elements. (no - true, yes - false)
+
+Iterator, ListIterator, Lambda Expression
+ListIterator - It is bidirectional. This means it allows us to iterate elements of a list in both the direction.
+
+
+
+Java Additional Topics
+--------------------------------
+Command Line arguments
+File, FileReader, FileWriter -  file.createNewFile(), reader.read(), writer.write(), file.delete()
+Lambda Expressons, Functional Interface, Runnable is an Functional Interface
+Generics Usage
+AutoBoxin & UnBoxing
+Wrapper classes
+
+Autoboxing vs. unboxing vs. valueOf()
+------------------------------------------------------
+Operation	Example	Meaning
+Autoboxing	Integer x = 10;	int → Integer automatically
+Unboxing	int x = wrapper;	Integer → int automatically
+Explicit boxing	Integer x = Integer.valueOf(10);	Explicitly obtains an Integer value
+String conversion	Integer x = Integer.valueOf("10");	Converts numeric text to Integer
+Parsing	int x = Integer.parseInt("10");	Converts numeric text directly to primitive int
+
+TypeCasting : Widening and Narrowing TypeCasting || Implicit & Explicit TypeCasting
+---------------------------------------------------------------------------------------
+In the case of Widening Type Casting, the lower data type (having smaller size) is converted into the higher data type 
+(having larger size). Hence there is no loss in data. This is why this type of conversion happens automatically.
+
+Note: This is also known as Implicit Type Casting.
+
+In the case of Narrowing Type Casting, the higher data types (having larger size) are converted into lower data types
+(having smaller size). Hence there is the loss of data. This is why this type of conversion does not happen automatically.
+
+Note: This is also known as Explicit Type Casting.
+
+Working of Java Scanner..
+----------------------------------
+The Scanner class reads an entire line and divides the line into tokens. Tokens are small elements that have some meaning to the Java compiler. For example,
+
+Suppose there is an input string: He is 22
+
+In this case, the scanner object will read the entire line and divides the string into tokens: "He", "is" and "22". 
+The object then iterates over each token and reads each token using its different methods.
+
+Note: By default, whitespace is used to divide tokens.
+
+Bitwise Operators
+
+Operator Precedence
+  - Increment & Decrement , Mutli, Add, shift, relational, Equality, bitwise AND, XOR, OR, Logical AND, OR, Ternary, assignment
+
+Java Keywords ( Interview Level Keywords, Imp Keywords, All Keywords)
